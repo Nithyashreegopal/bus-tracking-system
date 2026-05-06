@@ -607,31 +607,61 @@ html,body{height:100%}
 .cLow{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
 .cMedium{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
 .cHigh{background:#fff1f2;color:#e11d48;border:1px solid #fecdd3}
+/* ============================= */
+/* 🗺️ MAP FIX (FINAL) */
+/* ============================= */
 
-/* Map - FIXED */
+/* Map container */
 .map-wrap{
   flex:1;
   position:relative;
   min-width:0;
-  min-height:300px; /* prevent collapse */
+  min-height:300px;
+  z-index:1; /* keep map below UI */
 }
 
+/* Map */
 #map{
   width:100%;
   height:100vh; /* full screen */
 }
 
-/* Mobile fix */
+/* ============================= */
+/* 📱 MOBILE MAP FIX */
+/* ============================= */
 @media (max-width:680px){
 
   .map-wrap{
-    height:60vh;
+    height:60vh; /* balanced with sidebar */
   }
 
   #map{
     height:100%;
   }
 
+}
+
+/* ============================= */
+/* 🔝 Z-INDEX FIX (IMPORTANT) */
+/* ============================= */
+
+/* Sidebar always above map */
+.sidebar{
+  position:relative;
+  z-index:1000;
+}
+
+/* Dropdown above everything */
+.ctrl-sel{
+  position:relative;
+  z-index:1100;
+}
+
+/* Reduce Leaflet layers */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom{
+  z-index:100 !important;
 }
 /* Status badges – top-right, clear of zoom buttons */
 .map-status{position:absolute;top:14px;right:14px;z-index:400;display:flex;flex-direction:column;gap:.4rem}
