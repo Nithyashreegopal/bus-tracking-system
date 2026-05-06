@@ -2221,6 +2221,20 @@ document.addEventListener('click',e=>{
 const ks=document.createElement('style');ks.textContent='@keyframes rippleGo{to{transform:scale(4);opacity:0}}';document.head.appendChild(ks);
 
 startSim();
+ 
+function showPg(pageId){
+  // hide all pages
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+  });
+
+  // show selected page
+  const page = document.getElementById(pageId);
+  if(page){
+    page.classList.add('active');
+  }
+}
+
 </script>
 </body>
 </html>
