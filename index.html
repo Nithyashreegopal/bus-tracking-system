@@ -390,6 +390,214 @@ html,body{height:100%}
   .sf:last-of-type,.sf-date{border-bottom:none}
   .sf-date{border-left:none}
 }
+  /* ───────── MOBILE RESPONSIVE ───────── */
+@media (max-width: 768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* NAVBAR */
+  .topnav{
+    flex-direction:column;
+    height:auto;
+    padding:12px 1rem;
+    gap:12px;
+  }
+
+  .nav-left,
+  .nav-right{
+    width:100%;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+
+  .nav-tabs{
+    margin-left:0;
+    width:100%;
+    justify-content:space-around;
+  }
+
+  .ntab{
+    flex:1;
+    justify-content:center;
+    font-size:.75rem;
+    height:48px;
+  }
+
+  .btn-admin{
+    width:100%;
+  }
+
+  /* HERO */
+  .hero{
+    min-height:260px;
+  }
+
+  .hero-content{
+    padding:1.5rem 1rem 1rem;
+  }
+
+  .hero-title{
+    font-size:1.7rem;
+  }
+
+  /* SEARCH BOX */
+  .search-outer{
+    padding:0 1rem;
+  }
+
+  .search-box{
+    padding:1rem;
+  }
+
+  .search-row{
+    flex-direction:column;
+  }
+
+  .sf,
+  .sf-date{
+    width:100%;
+    border-right:none !important;
+    border-left:none !important;
+    border-bottom:1px solid #eee;
+  }
+
+  .sf:last-child,
+  .sf-date{
+    border-bottom:none;
+  }
+
+  .btn-track{
+    font-size:.9rem;
+  }
+
+  /* SECTIONS */
+  .sec,
+  .why,
+  .faq-sec{
+    padding:2rem 1rem;
+  }
+
+  .sec-head{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+
+  /* OFFER CARDS */
+  .offer-row{
+    gap:.7rem;
+  }
+
+  .ocard{
+    width:170px;
+  }
+
+  /* FEATURES */
+  .feat-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* ROUTES */
+  .route-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* FOOTER */
+  .footer{
+    grid-template-columns:1fr;
+    padding:1.5rem 1rem;
+  }
+
+  .footer-btm{
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+    padding:1rem;
+  }
+
+  /* TRACK PAGE */
+  .track-body{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    max-height:260px;
+  }
+
+  .map-wrap{
+    height:65vh;
+  }
+
+  .track-nav-bar{
+    flex-direction:column;
+    height:auto;
+    gap:10px;
+    padding:12px 1rem;
+  }
+
+  .track-right{
+    width:100%;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+
+  .tnpill{
+    flex:1;
+    text-align:center;
+  }
+
+  /* LOGIN PAGE */
+  .lcard{
+    flex-direction:column;
+    border-radius:18px;
+  }
+
+  .lcard-l{
+    width:100%;
+    min-height:180px;
+  }
+
+  .lcard-r{
+    padding:2rem 1.2rem;
+  }
+
+  /* DASHBOARD */
+  .mgrid,
+  .irow,
+  .cgrid3,
+  .cgrid2,
+  .cgrid-gauge{
+    grid-template-columns:1fr;
+  }
+
+  .dash-body{
+    padding:1rem;
+  }
+
+  /* TABLE SCROLL */
+  .mpanel{
+    overflow-x:auto;
+  }
+
+  .dtbl{
+    min-width:600px;
+  }
+
+  /* MAP BADGES */
+  .map-status{
+    top:10px;
+    right:10px;
+  }
+
+  .map-badge{
+    font-size:.7rem;
+    padding:6px 10px;
+  }
+
+}
 </style>
 </head>
 <body>
